@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC
+        "-//Checkstyle//DTD Checkstyle Configuration 1.3//EN"
+        "file:///C:/Users/tuguk/Myapp/sakana/backend/config/checkstyle/configuration_1_3.dtd">
+
+<module name="Checker">
+
+    <!-- ファイル全体のチェック（TreeWalkerの外） -->
+
+    <!-- タブ文字のチェック -->
+    <module name="FileTabCharacter">
+        <property name="eachLine" value="true"/>
+    </module>
+
+    <!-- 空行を禁止 -->
+    <module name="RegexpSingleline">
+        <property name="format" value="^[ \t]+$"/>
+        <property name="message" value="空白だけの行は禁止です"/>
+    </module>
+
+    <!-- 行末空白を禁止 -->
+    <module name="RegexpSingleline">
+        <property name="format" value="\s+$"/>
+        <property name="message" value="行末の空白は禁止です"/>
+    </module>
+
+    <!-- 行長チェック（TreeWalker の外） -->
+    <module name="LineLength">
+        <property name="max" value="120"/>
+    </module>
+
+    <!-- ASTベースのチェック（TreeWalker 内） -->
+    <module name="TreeWalker">
+        <!-- インデント -->
+        <module name="Indentation">
+            <property name="basicOffset" value="4"/>
+            <property name="tabWidth" value="4"/>
+        </module>
+
+        <!-- スペース関連 -->
+        <module name="WhitespaceAfter"/>
+        <module name="WhitespaceAround"/>
+        <module name="NoWhitespaceAfter"/>
+        <module name="NoWhitespaceBefore"/>
+
+        <!-- 命名規則 -->
+        <module name="MethodName"/>
+        <module name="ParameterName"/>
+        <module name="MemberName"/>
+        <module name="LocalVariableName"/>
+    </module>
+</module>
