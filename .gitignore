@@ -1,0 +1,14 @@
+# node
+node_modules
+.next
+
+# java
+.gradle
+build
+target
+
+# env
+.env
+
+# mac
+.DS_Store
