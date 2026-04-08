@@ -2,6 +2,7 @@ package backend.sakana.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.Setter;
 
 
 import java.time.LocalDateTime;
@@ -9,6 +10,7 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "user")
 @Getter
+@Setter
 public class UserEntity {
 
     @Id
@@ -18,7 +20,13 @@ public class UserEntity {
     @Column(name = "username")
     private String userName;
 
+    @Column(name = "display_name")
+    private String displayName;
+
     private String email;
+
+    @Column(name = "password_hash")
+    private String passwordHash;
 
     @Column(name = "created_at")
     private LocalDateTime createdAt;

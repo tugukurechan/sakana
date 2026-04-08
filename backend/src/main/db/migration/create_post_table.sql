@@ -13,3 +13,5 @@ CREATE TABLE IF NOT EXISTS sakana001.post
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, -- 更新日時
     author_id INTEGER -- ユーザーID
 );
+
+-- 画像は post_image テーブルで管理する（1:N）

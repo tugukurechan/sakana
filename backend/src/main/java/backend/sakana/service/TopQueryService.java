@@ -35,6 +35,7 @@ public class TopQueryService {
                                 : post.getFishes().stream()
                                 .map(FishEntity::getName)
                                 .filter(Objects::nonNull)
+                                .sorted(String.CASE_INSENSITIVE_ORDER)
                                 .toList(),
                         post.getAuthor() == null ? null : post.getAuthor().getUserName()
                 )).toList();
