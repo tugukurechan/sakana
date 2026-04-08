@@ -6,6 +6,7 @@ node_modules
 .gradle
 build
 target
+out
 
 # env
 .env
